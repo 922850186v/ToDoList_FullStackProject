@@ -33,14 +33,14 @@ Clone the repository to your local machine:
 ## 2. Environment Setup
 
 Create a `.env` file in the root of your project and add the following environment variables to configure the MySQL database:
-- MYSQL_ROOT_PASSWORD=root
+- MYSQL_ROOT_PASSWORD=admin123
 - MYSQL_DATABASE=todo_directory
-- MYSQL_USER=root
-- MYSQL_PASSWORD=
+- MYSQL_USER=admin
+- MYSQL_PASSWORD=admin123
 
 ## 3. Build and Run Docker Containers 
 * Build and start the containers:
-`docker-compose up --build`
+`docker-compose up --build -d`
 
 This command will build the Docker images and start the containers. It will:
 
@@ -58,7 +58,7 @@ This command will build the Docker images and start the containers. It will:
 To connect to the MySQL database running in the container, you can use the following credentials:
 
 * Host: `localhost`
-* Port: `3306`
-* Username: `root`
-* Password: ``
+* Port: `3307`
+* Username: `admin`
+* Password: `admin123`
 * Database: `todo_directory`

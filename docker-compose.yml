@@ -1,15 +1,13 @@
-version: "3.8"
-
 services:
   backend:
     build:
       context: ./server
       dockerfile: Dockerfile.server  
-    container_name: fastapi-server
+    container_name: server
     ports:
       - "8000:8000"  
     environment:
-      - MYSQL_HOST=db
+      - MYSQL_HOST=mysql-db
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=abc123
       - MYSQL_DB=todo_directory
@@ -30,15 +28,15 @@ services:
     image: mysql:5.7
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: abc123
+      MYSQL_ROOT_PASSWORD: admin123
       MYSQL_DATABASE: todo_directory
       MYSQL_USER: admin
-      MYSQL_PASSWORD: 
+      MYSQL_PASSWORD: admin123
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - mysql-data:/var/lib/mysql
     ports:
-      - "3307:3306"  
+      - "3307:3306"
 
 volumes:
   mysql-data:

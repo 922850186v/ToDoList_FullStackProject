@@ -10,8 +10,8 @@ services:
       - "8000:8000"  
     environment:
       - MYSQL_HOST=db
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=abc@123
       - MYSQL_DB=todo_directory
     depends_on:
       - db
@@ -30,14 +30,14 @@ services:
     image: mysql:5.7
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: abc@123
       MYSQL_DATABASE: todo_directory
-      MYSQL_USER: root
+      MYSQL_USER: admin
       MYSQL_PASSWORD: 
     volumes:
       - mysql-data:/var/lib/mysql
     ports:
-      - "3306:3306"  
+      - "3307:3306"  
 
 volumes:
   mysql-data:

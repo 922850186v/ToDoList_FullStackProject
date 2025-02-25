@@ -11,7 +11,7 @@ services:
     environment:
       - MYSQL_HOST=db
       - MYSQL_USER=admin
-      - MYSQL_PASSWORD=abc@123
+      - MYSQL_PASSWORD=abc123
       - MYSQL_DB=todo_directory
     depends_on:
       - db
@@ -30,11 +30,12 @@ services:
     image: mysql:5.7
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: abc@123
+      MYSQL_ROOT_PASSWORD: abc123
       MYSQL_DATABASE: todo_directory
       MYSQL_USER: admin
       MYSQL_PASSWORD: 
     volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - mysql-data:/var/lib/mysql
     ports:
       - "3307:3306"  

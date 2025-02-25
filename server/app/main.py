@@ -2,11 +2,9 @@ import datetime
 from fastapi import FastAPI, HTTPException, Depends, status
 from pydantic import BaseModel
 from typing import Annotated, Optional
-from models import *
-from databse import engine, SessionLocal
+from server.app.database import engine, SessionLocal
 from sqlalchemy.orm import Session
 from fastapi.middleware.cors import CORSMiddleware
-
 from server.app import models
 
 app = FastAPI()

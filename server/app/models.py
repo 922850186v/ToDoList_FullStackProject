@@ -1,5 +1,5 @@
 from sqlalchemy import Boolean, Column, Integer, String, TIMESTAMP
-from databse import Base
+from server.app.database import Base
 
 class Task(Base):
     __tablename__ = 'task'

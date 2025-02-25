@@ -22,7 +22,10 @@ SET time_zone = "+05:30";
 --
 
 -- --------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS todo_directory;
 
+-- Switch to the new database
+USE todo_directory;
 --
 -- Table structure for table `task`
 --

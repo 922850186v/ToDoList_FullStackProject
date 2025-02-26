@@ -50,7 +50,7 @@ This command will build the Docker images and start the containers. It will:
 
 * Access the Application:
 
-   * Frontend: Open your browser and go to [http://http://127.0.0.1/](http://127.0.0.1/).
+   * Frontend: Open your browser and go to [http://127.0.0.1/](http://127.0.0.1/).
    * Backend (FastAPI): Go to [http://localhost:8000/docs](http://localhost:8000/docs) to check the Swagger Document.
 
 ## 4. Access the MySQL Database

@@ -9,7 +9,7 @@ services:
     environment:
       - MYSQL_HOST=mysql-db
       - MYSQL_USER=admin
-      - MYSQL_PASSWORD=abc123
+      - MYSQL_PASSWORD=admin123
       - MYSQL_DB=todo_directory
     depends_on:
       - db
@@ -36,7 +36,7 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - mysql-data:/var/lib/mysql
     ports:
-      - "3307:3306"
+      - "3306:3306"
 
 volumes:
   mysql-data:

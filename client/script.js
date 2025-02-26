@@ -16,9 +16,10 @@ function addTask() {
 		};
 
 		// Make the API call to create the task
-		fetch("http://127.0.0.1:8000/api/v1/task/add", {
+		fetch("http://localhost:8000/api/v1/task/add", {
 			method: "POST",
 			headers: {
+				accept: "application/json",
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(taskData),
@@ -95,7 +96,7 @@ function updateTask(id) {
                 created_at: new Date().toISOString(),
                 updated_at: new Date().toISOString(),
         };
-        fetch(`http://127.0.0.1:8000/api/v1/task/update/${id}`, {
+        fetch(`http://localhost:8000/api/v1/task/update/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

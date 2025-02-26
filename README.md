@@ -28,7 +28,7 @@ This project demonstrates how to build and deploy a full-stack application with 
 ## 1. Clone the Repository #
 
 Clone the repository to your local machine:
-- gh repo clone 922850186v/Todo_List
+- gh repo clone 922850186v/ToDoList_FullStackProject
 
 ## 2. Environment Setup
 

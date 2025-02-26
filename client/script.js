@@ -104,7 +104,6 @@ function updateTask(id) {
             body: JSON.stringify(updatedTaskData),
             
         }).then((response) => {
-            console.log("Response Status:", response);
             if (response.ok) {
                 alert("Task is Completed!")
                 window.location.reload();

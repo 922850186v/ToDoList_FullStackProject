@@ -41,6 +41,7 @@ Create a `.env` file in the root of your project and add the following environme
 ## 3. Build and Run Docker Containers 
 * Build and start the containers:
 `docker-compose up --build -d`
+`docker-compose up`
 
 This command will build the Docker images and start the containers. It will:
 
